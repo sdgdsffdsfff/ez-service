@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ecfront</groupId>
+        <artifactId>ez-parent</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <groupId>com.ecfront</groupId>
+    <artifactId>ez-service</artifactId>
+    <name>EZ Service</name>
+    <description>服务脚手架模块</description>
+    <url>https://github.com/gudaoxuri/ez-service</url>
+    <packaging>jar</packaging>
+    <version>0.1.0</version>
+
+    <scm>
+        <connection>scm:git:git@github.com:gudaoxuri/ez-service.git</connection>
+        <developerConnection>scm:git:git@github.com:gudaoxuri/ez-service.git</developerConnection>
+        <url>git@github.com:gudaoxuri/ez-service.git</url>
+    </scm>
+
+    <properties>
+        <ez-common.version>0.4.1</ez-common.version>
+        <ez-storage.version>0.2.4</ez-storage.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ecfront</groupId>
+            <artifactId>ez-common</artifactId>
+            <version>${ez-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ecfront</groupId>
+            <artifactId>ez-storage</artifactId>
+            <version>${ez-storage.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
