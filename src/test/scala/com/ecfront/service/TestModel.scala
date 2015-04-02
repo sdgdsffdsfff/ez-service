@@ -4,7 +4,7 @@ import com.ecfront.storage.Entity
 
 import scala.beans.BeanProperty
 
-@Entity(idField = "id")
+@Entity(idField = "id",desc="")
 case class TestModel() extends SecureModel {
   @BeanProperty var name: String = _
   @BeanProperty var bool: Boolean = _
