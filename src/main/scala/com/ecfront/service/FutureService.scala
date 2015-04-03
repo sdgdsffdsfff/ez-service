@@ -6,7 +6,7 @@ import com.ecfront.storage.PageModel
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-trait FutureBasicService[M <: AnyRef] extends BasicService[M] {
+trait FutureService[M <: AnyRef] extends BasicService[M] {
 
   def _getById(id: String, request: SReq): Future[Resp[M]] = Future {
     _executeGetById(id, request)

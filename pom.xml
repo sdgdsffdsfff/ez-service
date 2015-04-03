@@ -16,7 +16,7 @@
     <description>服务脚手架模块</description>
     <url>https://github.com/gudaoxuri/ez-service</url>
     <packaging>jar</packaging>
-    <version>0.1.2</version>
+    <version>0.1.4</version>
 
     <scm>
         <connection>scm:git:git@github.com:gudaoxuri/ez-service.git</connection>
