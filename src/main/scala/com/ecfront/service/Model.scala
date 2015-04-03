@@ -1,9 +1,11 @@
 package com.ecfront.service
 
+import com.ecfront.storage.Id
+
 import scala.beans.BeanProperty
 
 abstract class IdModel {
-  @BeanProperty var id: String = _
+  @BeanProperty @Id var id: String = _
 }
 
 object IdModel {
