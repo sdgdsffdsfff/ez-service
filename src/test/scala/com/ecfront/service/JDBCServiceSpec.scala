@@ -36,6 +36,7 @@ class JDBCServiceSpec extends FunSuite {
     Await.result(TestJDBCService._update("id001", model, request), Duration.Inf)
     resultSingle = Await.result(TestJDBCService._getById("id001", request), Duration.Inf).body
     assert(resultSingle.name == "haha")
+    assert(resultSingle.create_time != 0)
     assert(!resultSingle.bool)
     //-------------------getByCondition--------------------------------------------
     resultSingle = Await.result(TestJDBCService._getByCondition("id='%s' AND name='%s'".format("id001", "haha"), request), Duration.Inf).body

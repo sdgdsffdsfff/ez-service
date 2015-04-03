@@ -266,6 +266,8 @@ trait BasicService[M <: AnyRef] extends LazyLogging {
   protected def _executeUpdate(id: String, model: M, request: SReq): Resp[String] = {
     val getResult = _doGetById(id, request)
     if (getResult) {
+      //获取已存储对象的创建时间（因为时间字段是long，不等于null，所以model.create_time=0不会被覆盖）
+      val sCreateTime = if (model.isInstanceOf[SecureModel]) getResult.body.asInstanceOf[SecureModel].create_time else 0
       BeanHelper.copyProperties(getResult.body, model)
       val nModel = getResult.body
       nModel match {
@@ -275,6 +277,7 @@ trait BasicService[M <: AnyRef] extends LazyLogging {
             case secureModel: SecureModel =>
               secureModel.update_time = System.currentTimeMillis()
               secureModel.update_user = request.accountId
+              secureModel.create_time = sCreateTime
             case _ =>
           }
         case _ =>
