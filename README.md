@@ -13,7 +13,7 @@ EZ Storage
     <dependency>
         <groupId>com.ecfront</groupId>
         <artifactId>ez-service</artifactId>
-        <version>0.1.0</version>
+        <version>0.1.4</version>
     </dependency>
 
 ### Check out sources
